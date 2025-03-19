@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebellion Rum Co - Temporarily Offline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('assets/background.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .header-bg {
+            background-image: url('assets/header-background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <!-- Header with logo -->
+            <div class="p-6 header-bg flex justify-center">
+                <img src="assets/logo.png" alt="Rebellion Rum Co" class="max-h-40">
+            </div>
+            
+            <!-- Content -->
+            <div class="p-8">
+                <h1 class="text-3xl font-bold text-center mb-6">Online Ordering Temporarily Unavailable</h1>
+                
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-4 mb-8">
+                    <p class="text-amber-700">
+                        We apologize for the inconvenience. Our online services are temporarily unavailable while we upgrade our website. We'll be back online as soon as possible.
+                    </p>
+                </div>
+                
+                <div class="mb-8">
+                    <h2 class="text-xl font-semibold mb-4 border-b pb-2">Visit Our Distillery</h2>
+                    <p class="mb-4">Our physical location is still open during our regular business hours:</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Opening Hours:</h3>
+                            <ul class="list-disc pl-5 space-y-1">
+                                <li>Thursday: 10am - 6pm</li>
+                                <li>Friday: 10am - 6pm</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-700 mb-2">Address:</h3>
+                            <p>27/3 Octal Street<br>Yatala</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-8">
+                    <h2 class="text-xl font-semibold mb-4 border-b pb-2">Contact Us</h2>
+                    <p class="mb-2">For any inquiries, please contact us:</p>
+                    <p class="font-semibold">Phone: <a href="tel:0452323234" class="text-blue-600 hover:underline">0452 323 234</a></p>
+                </div>
+                
+                <!-- Google Map -->
+                <div class="mb-8">
+                    <h2 class="text-xl font-semibold mb-4 border-b pb-2">Find Us</h2>
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mb-2">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.0132607516394!2d153.2651358!3d-27.762889699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b916549e3e7617b%3A0x911b1b83e52b3fd5!2sRebellion%20Rum%20Co!5e0!3m2!1sen!2sau!4v1708648226989!5m2!1sen!2sau" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg">
+                        </iframe>
+                    </div>
+                    <div class="text-center text-sm">
+                        <a href="https://goo.gl/maps/Q7prH9z7CPQHwTZ87" target="_blank" class="text-blue-600 hover:underline">
+                            Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="bg-gray-900 text-white p-6 text-center">
+                <p>&copy; 2025 Rebellion Rum Co. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fix for aspect-ratio support -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mapContainer = document.querySelector('.aspect-w-16');
+            if (mapContainer) {
+                const paddingPercentage = (9 / 16) * 100;
+                mapContainer.style.position = 'relative';
+                mapContainer.style.paddingBottom = `${paddingPercentage}%`;
+                
+                const iframe = mapContainer.querySelector('iframe');
+                if (iframe) {
+                    iframe.style.position = 'absolute';
+                    iframe.style.top = '0';
+                    iframe.style.left = '0';
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
